@@ -1,8 +1,13 @@
-### GENERATE SELF-SIGNED FOR VHOST
+### SETUP REMOTE LOCALHOST DEVELOPMENT
 ```
+//Generate Selfsigned Certificate
 $ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
 
-//Setup Vhost
+//Setup webapp Vhost
+<VirtualHost *:80>
+        ServerName ilc.upd.edu.ph
+        DocumentRoot /var/www/html/webapp
+</VirtualHost>
 <IfModule mod_ssl.c>
 <VirtualHost *:443>
         ServerName google.com
@@ -24,4 +29,12 @@ $ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/priv
 
 </VirtualHost>
 </IfModule>
+
+//In Windows hosts
+remote-server-publicip-address google.com
+remote-server-privateip-address google.com
+
+//In CMD
+ipconfig/flushdns
+
 ```
