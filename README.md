@@ -9,8 +9,9 @@ $ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/priv
 
 //Setup webapp Vhost
 <VirtualHost *:80>
-        ServerName ilc.upd.edu.ph
+        ServerName google.com
         DocumentRoot /var/www/html/webapp
+        
 </VirtualHost>
 <IfModule mod_ssl.c>
 <VirtualHost *:443>
@@ -35,8 +36,8 @@ $ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/priv
 </IfModule>
 
 //In Windows OS hosts
-remote-server-publicip-address google.com
-remote-server-privateip-address google.com
+10.40.23.789 google.com
+202.40.23.789 google.com
 
 //In CMD
 ipconfig/flushdns
