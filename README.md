@@ -21,7 +21,7 @@ $ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/priv
         #Redirect permanent / https://yahoo.com
         <Directory /var/www/html/webapp>
             Options -Indexes +FollowSymlinks +MultiViews
-            AllowOverride All
+            AllowOverride All //Allow .htaccess Config
             Require all granted
         </Directory>
         ErrorLog ${APACHE_LOG_DIR}/dev_webapp_error.log
