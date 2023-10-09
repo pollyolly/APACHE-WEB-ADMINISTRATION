@@ -1,5 +1,5 @@
 ### SETUP REMOTE LOCALHOST DEVELOPMENT
-```
+```vim
 /* You need this to avoid changing the domain name in the Wordpress Database */
 //Generate Selfsigned Certificate
 $ sudo a2enmod rewrite
